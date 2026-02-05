@@ -1,11 +1,11 @@
 {
-  "name": "demo-vite",
+  "name": "Style-mode",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/demo-vite/",
+    "build": "vite build --base=/Style-mode/",
     "preview": "vite preview"
   },
   "devDependencies": {
