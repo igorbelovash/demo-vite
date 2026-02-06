@@ -1,0 +1,38 @@
+.container {
+  padding: 64px 16px;
+}
+.moments-title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0b0803;
+  margin-bottom: 24px;
+}
+
+.moments-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #0b0803;
+  margin-bottom: 32px;
+}
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gallery-img {
+  border-radius: 32px;
+}
