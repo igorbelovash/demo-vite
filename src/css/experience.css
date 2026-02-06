@@ -85,7 +85,17 @@
     flex-basis: 416px;
   }
 
+  .gallery-list {
+    flex-direction: column;
+    max-height: 948px;
+    justify-content: start;
+  }
+
   .gallery-item {
+    width: calc((100% - 64px) / 3);
+  }
+
+  .gallery-list .gallery-item:last-child {
     width: calc((100% - 64px) / 3);
   }
 }
