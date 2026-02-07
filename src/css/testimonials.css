@@ -26,6 +26,9 @@
 
 .testimonials-content {
     padding: 32px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .testimonials-rating {
@@ -45,4 +48,32 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
+    margin-top: auto;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .container {
+        padding: 0 32px;
+    }
+
+    .testimonials-item {
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .container {
+        padding: 0 64px;
+    }
+
+    .testimonials-title {
+        font-size: 48px;
+        max-width: 416px;
+    }
+
+    .testimonials-item {
+        width: calc((100% - 72px) / 4);
+    }
 }
