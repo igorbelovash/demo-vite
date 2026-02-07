@@ -65,10 +65,12 @@
 .text-invalid {
   color: red;
 }
-.subscribe-input:not(:placeholder-shown):valid ~ .text-valid {
+.subscribe-input:not(:placeholder-shown):valid ~ .visually-hidden .text-valid {
   display: block;
 }
-.subscribe-input:not(:placeholder-shown):invalid ~ .text-invalid {
+.subscribe-input:not(:placeholder-shown):invalid
+  ~ .visually-hidden
+  .text-invalid {
   display: block;
 }
 .subscribe-button {
@@ -123,9 +125,8 @@
 }
 @media screen and (min-width: 768px) {
   .section-subscribe {
-  padding: 64px 32px;
-}
-
+    padding: 64px 32px;
+  }
 
   .subscribe-form {
     display: flex;
@@ -160,9 +161,8 @@
 }
 @media screen and (min-width: 1440px) {
   .section-subscribe {
-  padding: 64px 64px;
-}
-
+    padding: 64px 64px;
+  }
 
   .subscribe-container {
     display: flex;
