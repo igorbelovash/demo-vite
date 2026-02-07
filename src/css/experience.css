@@ -44,7 +44,6 @@
 /* Styles for Tablet devices */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
     padding: 64px 32px;
   }
 
@@ -67,7 +66,6 @@
 /* Styles for Desktop devices */
 @media screen and (min-width: 1440px) {
   .container {
-    max-width: 1440px;
     padding: 64px;
   }
 
