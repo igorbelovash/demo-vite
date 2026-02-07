@@ -1,12 +1,13 @@
-
-
+.section-subscribe {
+  padding: 64px 16px;
+}
 
 .subscribe-title {
   font-family: 'Aboreto', sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 1.2;
-  letter-spacing: -0.01em;  
+  letter-spacing: -0.01em;
   margin-bottom: 24px;
 }
 .subscribe-title-label {
@@ -111,7 +112,6 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
-  
   margin-bottom: 32px;
 }
 .subscribe-img {
@@ -122,6 +122,11 @@
   height: 400px;
 }
 @media screen and (min-width: 768px) {
+  .section-subscribe {
+  padding: 64px 32px;
+}
+
+
   .subscribe-form {
     display: flex;
     flex-direction: row;
@@ -154,6 +159,11 @@
   }
 }
 @media screen and (min-width: 1440px) {
+  .section-subscribe {
+  padding: 64px 64px;
+}
+
+
   .subscribe-container {
     display: flex;
     justify-content: space-between;
