@@ -110,7 +110,7 @@
 .subscribe-button:active {
   box-shadow: none;
 }
-.form-title {
+.subscribe-title-label {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
@@ -151,7 +151,7 @@
     height: 48px;
     margin-bottom: 0;
   }
-  .form-title {
+  .subscribe-title-label {
     margin-bottom: 0;
   }
   .subscribe-img {
