@@ -10,6 +10,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .section-subscribe {
   padding-top: 64px;
   padding-bottom: 64px;
@@ -23,19 +24,16 @@
   letter-spacing: -0.01em;
   margin-bottom: 24px;
 }
-
 .subscribe-subtitle {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.5;
-  margin-bottom: 32px;
 }
-
 .subscribe-form {
   display: flex;
   flex-direction: column;
   margin-top: 32px;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
 }
 
 .inp-wrp {
@@ -120,6 +118,7 @@
   height: 44px;
   border: none;
 }
+
 .subscribe-button:hover {
     opacity: 0.5;
     transition-duration: 250ms;
@@ -136,18 +135,15 @@
    opacity: 1;
 }
 
-.subscribe-subtitle {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.5;
-  margin-bottom: 32px;
-}
+
+
 .subscribe-text {
   font-weight: 400;
 font-size: 12px;
 line-height: 1.5;
 margin-bottom: 32px;
 }
+
 .subscribe-img {
   border-radius: 40px;
   width: 100%;
@@ -166,8 +162,7 @@ margin-bottom: 32px;
     margin-bottom: 32px;
   }
 
-  .subscribe-form {
-  }
+  
 
   .inp-wrp {
     margin-bottom: 0;
