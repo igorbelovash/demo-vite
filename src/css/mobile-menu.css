@@ -25,21 +25,46 @@
   padding-bottom: 18px;
   padding-left: 16px;
 }
-.header-menu-logo-svg {
-}
 .close-menu {
   padding: 0;
   border: none;
   background-color: transparent;
   padding-right: 24px;
+  transition: opacity 250ms ease;
 }
 .close-menu-icon {
+  fill: #0b0803;
 }
 .mob-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mob-nav-list {
-}
-.mob-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
 }
 .mob-nav-link {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0b0803;
+  transition: opacity 250ms ease;
+}
+.mob-nav-link:hover,
+.mob-nav-link:focus {
+  opacity: 0.7;
+}
+.mob-nav-link:active {
+  opacity: 0.5;
+}
+.close-menu:hover,
+.close-menu:focus {
+  opacity: 0.7;
+}
+.close-menu:active {
+  opacity: 1;
 }
