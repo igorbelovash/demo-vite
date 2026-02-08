@@ -55,8 +55,8 @@
 }
 
 .footer__social-link {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     display: grid;
     place-items: center;
     color: #0b0803;
@@ -68,12 +68,15 @@
 .footer__social-link:focus-visible {
     opacity: 0.85;
     transform: translateY(-1px);
-    outline: none;
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
 }
 
 .footer__social-icon {
     display: block;
     fill: currentColor;
+    width: 24px;
+    height: 24px;
 }
 
 .footer__right {
@@ -108,6 +111,7 @@
 }
 
 .footer__copy {
+
     margin: 0;
     font-weight: 400;
     font-size: 14px;
