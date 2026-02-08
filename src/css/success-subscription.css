@@ -1,0 +1,324 @@
+/* =========================
+   DEMO PAGE (not part of проекту)
+   ========================= */
+
+:root {
+    --bg: #f5f2ee;
+    --ink: #0b0803;
+    --muted: rgba(11, 8, 3, 0.7);
+    --card: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: radial-gradient(1200px 600px at 20% 0%, #fff 0%, var(--bg) 55%, #efe8e0 100%);
+}
+
+.page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 28px 16px 56px;
+}
+
+.demo-header {
+    padding: 18px 18px 10px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+.demo-title {
+    margin: 0 0 8px;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.demo-subtitle {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.45;
+}
+
+.demo-controls {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+.demo-open {
+    height: 44px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 999px;
+    background: var(--ink);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.demo-open:hover,
+.demo-open:focus-visible {
+    transform: translateY(-1px);
+}
+
+.demo-open:active {
+    transform: translateY(0);
+    opacity: 0.92;
+}
+
+.demo-hint {
+    margin: 12px 0 0;
+    color: var(--muted);
+    line-height: 1.45;
+}
+
+.demo-hint code {
+    padding: 1px 6px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.06);
+}
+
+/* =========================
+   SUCCESS SUBSCRIPTION MODAL
+   ========================= */
+
+/* коли модалка відкрита — блокуємо скрол */
+.subscription-open {
+    overflow: hidden;
+}
+
+/* backdrop: за замовчуванням приховано */
+.subscription-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px;
+
+    background: rgba(11, 8, 3, 0.55);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 250ms ease, visibility 250ms ease;
+}
+
+/* показ модалки — якщо class subscription-open є на предку (у демо: на body) */
+.subscription-open .subscription-backdrop {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* контейнер модалки */
+.subscription-modal {
+    position: relative;
+    width: 100%;
+    max-width: 288px;
+    /* під 320px */
+    max-height: calc(100vh - 32px);
+    overflow: auto;
+
+    border-radius: 24px;
+    background: #ffffff;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+    /* mobile: stacked layout */
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* кнопка "x" */
+.subscription-close-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    border: 1px solid rgba(11, 8, 3, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+
+    display: grid;
+    place-items: center;
+
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+
+    transition: transform 150ms ease, background 150ms ease, border-color 150ms ease;
+}
+
+.subscription-close-icon:hover,
+.subscription-close-icon:focus-visible {
+    transform: scale(1.05);
+    background: #ffffff;
+    border-color: rgba(11, 8, 3, 0.35);
+}
+
+/* медіа */
+.subscription-media {
+    border-radius: 24px 24px 0 0;
+    overflow: hidden;
+    background: #f1ede8;
+}
+
+.subscription-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* контент */
+.subscription-content {
+    padding: 18px 16px 16px;
+    text-align: center;
+}
+
+.subscription-title {
+    margin: 0 0 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #0b0803;
+}
+
+.subscription-desc {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgba(11, 8, 3, 0.75);
+}
+
+/* кнопка Close */
+.subscription-close-btn {
+    width: 100%;
+    height: 44px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: #0b0803;
+    color: #ffffff;
+
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.subscription-close-btn:hover,
+.subscription-close-btn:focus-visible {
+    transform: translateY(-1px);
+}
+
+.subscription-close-btn:active {
+    transform: translateY(0);
+    opacity: 0.9;
+}
+
+/* ===== MOBILE becomes adaptive from 375px ===== */
+@media screen and (min-width: 375px) {
+    .subscription-modal {
+        max-width: 343px;
+    }
+
+    .subscription-content {
+        padding: 20px 18px 18px;
+    }
+
+    .subscription-title {
+        font-size: 22px;
+    }
+
+    .subscription-desc {
+        font-size: 15px;
+    }
+}
+
+/* ===== TABLET 768px ===== */
+@media screen and (min-width: 768px) {
+    .subscription-backdrop {
+        padding: 32px;
+    }
+
+    .subscription-modal {
+        max-width: 720px;
+        grid-template-columns: 320px 1fr;
+        /* картинка + текст */
+        border-radius: 28px;
+    }
+
+    .subscription-media {
+        border-radius: 28px 0 0 28px;
+    }
+
+    .subscription-content {
+        text-align: left;
+        padding: 32px 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .subscription-title {
+        font-size: 28px;
+    }
+
+    .subscription-desc {
+        font-size: 16px;
+        margin-bottom: 22px;
+    }
+
+    .subscription-close-btn {
+        width: fit-content;
+        padding: 0 26px;
+    }
+
+    .subscription-close-icon {
+        top: 16px;
+        right: 16px;
+    }
+}
+
+/* ===== DESKTOP 1440px ===== */
+@media screen and (min-width: 1440px) {
+    .subscription-modal {
+        max-width: 860px;
+        grid-template-columns: 420px 1fr;
+    }
+
+    .subscription-title {
+        font-size: 32px;
+    }
+
+    .subscription-desc {
+        font-size: 17px;
+    }
+}
