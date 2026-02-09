@@ -3,7 +3,6 @@
 }
 .location-container {
   min-width: 320px;
-  max-width: 375px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -32,9 +31,7 @@
 }
 
 .location-list {
-  padding: 0;
-  margin: 0 0 32px 0;
-  list-style: none;
+  margin-bottom: 32px;
 }
 
 .location-item:not(:last-child) {
@@ -80,7 +77,7 @@
   color: #23201c;
   text-decoration: none;
   border-bottom: none;
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
   line-height: 1.5;
   white-space: nowrap;
   font-family: 'Quicksand', sans-serif;
@@ -90,9 +87,9 @@
 }
 
 .location-map {
-  border-radius: 24px;
+  border-radius: 40px;
   overflow: hidden;
-  height: 350px;
+  height: 307px;
   width: 100%;
 }
 .location-map iframe {
@@ -100,7 +97,11 @@
   height: 100%;
   border: 0;
 }
-
+@media screen and (min-width: 375px) {
+  .location-container {
+    max-width: 375px;
+  }
+}
 @media screen and (min-width: 768px) {
   .location-container {
     max-width: 768px;
@@ -137,7 +138,7 @@
   .location-map {
     height: 377px;
     max-width: 100%;
-    border-radius: 24px;
+    border-radius: 40px;
   }
 }
 
