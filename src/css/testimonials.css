@@ -52,10 +52,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    
-    .container {
-        padding: 0 32px;
-    }
+    /* container padding centralized in container.css */
 
     .testimonials-item {
         width: calc((100% - 24px) / 2);
@@ -63,10 +60,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-
-    .container {
-        padding: 0 64px;
-    }
+    /* container padding centralized in container.css */
 
     .testimonials-title {
         font-size: 48px;
