@@ -102,23 +102,8 @@
   border: none;
 }
 
-.subscribe-button:hover {
-  opacity: 0.5;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background-color;
-}
-
 .svg-button {
   fill: #fff;
-}
-
-.subscribe-button:focus
-.subscribe-button:active {
-  outline: none;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background-color;
 }
 
 .subscribe-text {
@@ -157,7 +142,6 @@
 
   .subscribe-button {
     width: 158px;
-    height: 48px;
     margin-bottom: 0;
   }
 
