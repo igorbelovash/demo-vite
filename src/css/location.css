@@ -87,7 +87,7 @@
   height: 100%;
   border: 0;
 }
-пше @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .location-container {
     max-width: 768px;
     padding: 0 32px;
@@ -125,7 +125,6 @@
     border-radius: 40px;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .location {
     padding: 64px 0;
