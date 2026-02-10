@@ -11,6 +11,7 @@
     margin-bottom: 16px;
 }
 .first-subtitel {
+    text-transform: uppercase;
     font-weight: 400;
     font-size: 36px;
     line-height: 1.2;
