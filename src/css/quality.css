@@ -7,8 +7,6 @@
 }
 
 .titel-qual {
-    font-family: "Quicksand",
-        sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
@@ -16,8 +14,7 @@
     margin-bottom: 16px;
 }
 .first-subtitel {
-    font-family: "Aboreto",
-        sans-serif;
+    text-transform: uppercase;
     font-weight: 400;
     font-size: 36px;
     line-height: 1.2;
@@ -28,8 +25,6 @@
 }
 
 .q-text {
-    font-family: "Quicksand",
-        sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
@@ -59,8 +54,6 @@
 }
 
 .img-subtitel {
-    font-family: "Quicksand",
-        sans-serif;
     font-weight: 600;
     font-size: 20px;
     line-height: 1.5;
@@ -69,8 +62,6 @@
 }
 
 .img-text {
-    font-family: "Quicksand",
-            sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -88,14 +79,24 @@
       justify-content: center;
 }
 
-.qual-item {
-  width: 340px; 
-}
+    .first-subtitel {
+        max-width: 452px;
+    }
 
-.qual-item:last-child {
-    width: 100%;
-    max-width: 100%;
-}
+   .qual-list {
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .qual-item {
+        width: 340px; 
+    }
+
+    .qual-item:last-child {
+        width: 100%;
+        max-width: 100%;
+    }
 
 .container-img {
     width: 294px;

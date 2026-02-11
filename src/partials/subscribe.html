@@ -1,0 +1,65 @@
+<section class="section-subscribe">
+  <div class="container subscribe-container">
+    <div class="subscribe">
+      <h2 class="subscribe-title">Join Our Coffee Community</h2>
+      <p class="subscribe-subtitle">
+        Experience the joy of coffee delivered right to your door. Sign up
+        today!
+      </p>
+      <form class="subscribe-form">
+        <div class="inp-wrp">
+          <label for="email"></label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Your Email Here"
+            class="subscribe-input"
+            name="email"
+            aria-describedby="email-error"
+            required
+          />
+          <label id="email-error" class="visually-hidden"
+            ><span class="error-text">Error Text</span></label
+          >
+        </div>
+        <button type="submit" class="subscribe-button btn">
+          Subscribe
+          <svg class="svg-button" width="24" height="24">
+            <use href="/img/sprite.svg#icon-chevrons-right" />
+          </svg>
+        </button>
+      </form>
+      <p class="subscribe-text">
+        By clicking Get Started, you agree to our Terms and Conditions.
+      </p>
+    </div>
+    <picture>
+      <source
+        srcset="
+          /img/Placeholder-Image-mobile-1x.jpg 1x,
+          /img/Placeholder-Image-mobile-2x.jpg 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <source
+        srcset="
+          /img/Placeholder-Image-tablet-1x.jpg 1x,
+          /img/Placeholder-Image-tablet-2x.jpg 2x
+        "
+        media="(max-width: 1439px)"
+      />
+      <source
+        srcset="
+          /img/Placeholder-Image-tablet-1x.jpg 1x,
+          /img/Placeholder-Image-tablet-2x.jpg 2x
+        "
+        media="(min-width: 1440px)"
+      />
+      <img
+        src="../img/Placeholder-Image-desktop-1x.jpg"
+        alt="offise"
+        class="subscribe-img"
+      />
+    </picture>
+  </div>
+</section>
