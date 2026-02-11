@@ -1,0 +1,86 @@
+.mob-menu {
+  background-color: #e0cbb4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mob-menu-overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-menu {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 16px;
+}
+
+.close-menu {
+  border: none;
+  background-color: transparent;
+  padding: 0 28px 0 0;
+  transition: opacity 250ms ease;
+}
+
+.close-menu-icon {
+  fill: #0b0803;
+}
+
+.mob-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 128px;
+}
+
+.mob-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.mob-nav-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: opacity 250ms ease;
+}
+
+.mob-nav-link:hover,
+.mob-nav-link:focus {
+  opacity: 0.7;
+}
+
+.mob-nav-link:active {
+  opacity: 0.5;
+}
+
+.close-menu:hover,
+.close-menu:focus {
+  opacity: 0.7;
+}
+
+.close-menu:active {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
+}
