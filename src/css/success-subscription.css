@@ -1,328 +1,163 @@
-/* ======DEMO PAGE ====== */
-
-:root {
-    --bg: #f5f2ee;
-    --ink: #0b0803;
-    --muted: rgba(11, 8, 3, 0.7);
-    --card: #ffffff;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    color: var(--ink);
-    background: radial-gradient(1200px 600px at 20% 0%, #fff 0%, var(--bg) 55%, #efe8e0 100%);
-}
-
-.page {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 28px 16px 56px;
-}
-
-.demo-header {
-    padding: 18px 18px 10px;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
-}
-
-.demo-title {
-    margin: 0 0 8px;
-    font-size: 22px;
-    line-height: 1.2;
-}
-
-.demo-subtitle {
-    margin: 0;
-    color: var(--muted);
-    line-height: 1.45;
-}
-
-.demo-controls {
-    margin-top: 18px;
-    padding: 18px;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
-}
-
-.demo-open {
-    height: 44px;
-    padding: 0 18px;
-    border: none;
-    border-radius: 999px;
-    background: var(--ink);
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 150ms ease, opacity 150ms ease;
-}
-
-.demo-open:hover,
-.demo-open:focus-visible {
-    transform: translateY(-1px);
-}
-
-.demo-open:active {
-    transform: translateY(0);
-    opacity: 0.92;
-}
-
-.demo-hint {
-    margin: 12px 0 0;
-    color: var(--muted);
-    line-height: 1.45;
-}
-
-.demo-hint code {
-    padding: 1px 6px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.06);
-}
-
-/* =====SUCCESS SUBSCRIPTION MODAL===== */
-
-
-.subscription-open {
-    overflow: hidden;
-    padding-right: var(--scrollbar-comp, 0px);
-}
-
-
-.subscription-backdrop {
+/* ===== SUCCESS SUBSCRIBE MODAL  ===== */
+.subscribe-success {
     position: fixed;
     inset: 0;
     z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 16px;
-
-    background: rgba(11, 8, 3, 0.55);
-
+    padding: 24px 16px;
+    background: rgba(11, 8, 3, 0.45);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
     transition: opacity 250ms ease, visibility 250ms ease;
 }
 
 
-.subscription-open .subscription-backdrop {
+.subscribe-success:target {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
 
-
-.subscription-modal {
+.subscribe-success__dialog {
     position: relative;
     width: 100%;
-    max-width: 288px;
-
-    max-height: calc(100vh - 32px);
+    max-width: 320px;
+    max-height: calc(100vh - 48px);
     overflow: auto;
+    border-radius: 40px;
+    padding: 64px 32px;
 
-    border-radius: 24px;
-    background: #ffffff;
-
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-
-
-    display: grid;
-    grid-template-columns: 1fr;
+    background: #e6c7b6;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    text-align: center;
 }
 
+@media (min-width: 768px) {
+    .subscribe-success__dialog {
+        max-width: 680px;
+        padding: 56px 40px 28px;
+    }
+}
 
-.subscription-close-icon {
+@media (min-width: 1440px) {
+    .subscribe-success__dialog {
+        max-width: 920px;
+        padding: 64px 80px 34px;
+    }
+}
+
+.subscribe-success__close-icon {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 24px;
+    right: 24px;
 
     width: 32px;
     height: 32px;
-    border-radius: 50%;
-
-    border: 1px solid rgba(11, 8, 3, 0.2);
-    background: rgba(255, 255, 255, 0.9);
-
     display: grid;
     place-items: center;
 
-    font-size: 22px;
+    text-decoration: none;
+    background: transparent;
+
+    font-size: 26px;
     line-height: 1;
+    color: #0b0803;
     cursor: pointer;
-
-    transition: transform 150ms ease, background 150ms ease, border-color 150ms ease;
 }
 
-.subscription-close-icon:hover,
-.subscription-close-icon:focus-visible {
-    transform: scale(1.05);
-    background: #ffffff;
-    border-color: rgba(11, 8, 3, 0.35);
+.subscribe-success__title {
+    margin: 0 0 10px;
+    font-weight: 00;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    font-size: 28px;
+    line-height: 1.15;
+    color: #0b0803;
 }
 
-
-.subscription-media {
-    border-radius: 24px 24px 0 0;
-    overflow: hidden;
-    background: #f1ede8;
+@media (min-width: 768px) {
+    .subscribe-success__title {
+        font-size: 36px;
+    }
 }
 
-.subscription-img {
+@media (min-width: 1440px) {
+    .subscribe-success__title {
+        font-size: 48px;
+    }
+}
+
+.subscribe-success__desc {
+    margin: 0 auto 18px;
+    max-width: 46ch;
+
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(11, 8, 3, 0.75);
+}
+
+@media (min-width: 768px) {
+    .subscribe-success__desc {
+        font-size: 13px;
+        margin-bottom: 22px;
+    }
+}
+
+.subscribe-success__picture {
+    display: block;
+    width: 100%;
+    margin: 0 auto 18px;
+    max-width: 256px;
+}
+
+@media (min-width: 768px) {
+    .subscribe-success__picture {
+        max-width: 644px;
+        margin-bottom: 22px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .subscribe-success__picture {
+        max-width: 644px;
+        margin-bottom: 24px;
+    }
+}
+
+.subscribe-success__img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-
-.subscription-content {
-    padding: 18px 16px 16px;
-    text-align: center;
-}
-
-.subscription-title {
-    margin: 0 0 10px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.2;
-    color: #0b0803;
-}
-
-.subscription-desc {
-    margin: 0 0 16px;
-    font-size: 14px;
-    line-height: 1.4;
-    color: rgba(11, 8, 3, 0.75);
-}
-
-
-.subscription-close-btn {
+.subscribe-success__btn {
+    display: block;
     width: 100%;
-    height: 44px;
+    max-width: 360px;
+    margin: 0 auto;
 
-    border: none;
+    text-decoration: none;
     border-radius: 999px;
+    padding: 12px 18px;
 
-    background: #0b0803;
-    color: #ffffff;
+    background: #6a4a3a;
+    color: #f5f2ee;
 
-    font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.2;
     cursor: pointer;
-
-    transition: transform 150ms ease, opacity 150ms ease;
 }
 
-.subscription-close-btn:hover,
-.subscription-close-btn:focus-visible {
-    transform: translateY(-1px);
+.subscribe-success__btn:hover {
+    background: #5f4132;
 }
 
-.subscription-close-btn:active {
-    transform: translateY(0);
-    opacity: 0.9;
-}
-
-/* ===== MOBILE 375px ===== */
-@media screen and (min-width: 375px) {
-    .subscription-modal {
-        max-width: 343px;
-    }
-
-    .subscription-content {
-        padding: 20px 18px 18px;
-    }
-
-    .subscription-title {
-        font-size: 22px;
-    }
-
-    .subscription-desc {
-        font-size: 15px;
-    }
-}
-
-/* ===== TABLET 768px ===== */
-@media screen and (min-width: 768px) {
-    .subscription-backdrop {
-        padding: 32px;
-    }
-
-    .subscription-modal {
-        max-width: 720px;
-        grid-template-columns: 320px 1fr;
-
-        border-radius: 28px;
-    }
-
-    .subscription-media {
-        border-radius: 28px 0 0 28px;
-    }
-
-    .subscription-content {
-        text-align: left;
-        padding: 32px 28px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .subscription-title {
-        font-size: 28px;
-    }
-
-    .subscription-desc {
-        font-size: 16px;
-        margin-bottom: 22px;
-    }
-
-    .subscription-close-btn {
-        width: fit-content;
-        padding: 0 26px;
-    }
-
-    .subscription-close-icon {
-        top: 16px;
-        right: 16px;
-    }
-}
-
-/* ===== DESKTOP 1440px ===== */
-@media screen and (min-width: 1440px) {
-    .subscription-modal {
-        max-width: 860px;
-        grid-template-columns: 420px 1fr;
-    }
-
-    .subscription-title {
-        font-size: 32px;
-    }
-
-    .subscription-desc {
-        font-size: 17px;
-    }
-}
-
-
-.subscription-backdrop.subscription-success {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+.subscribe-success__close-icon:focus-visible,
+.subscribe-success__btn:focus-visible {
+    outline: 2px solid rgba(11, 8, 3, 0.55);
+    outline-offset: 3px;
 }
